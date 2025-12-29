@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+.heart {
+    background: linear-gradient(45deg,
+            #feda75,
+            #fa7e1e,
+            #d62976,
+            #962fbf,
+            #4f5bd5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.open {
+    animation: like .5s ease-in-out forwards,
+        goup .4s ease-in-out .8s;
+}
+
+@keyframes like {
+    0% {
+        scale: 0;
+        top: 50%;
+        opacity: 0;
+        rotate: var(--rot);
+    }
+
+    100% {
+        scale: 1;
+        opacity: 1;
+        rotate: 0;
+    }
+}
+
+@keyframes goup {
+    0% {
+        top: 50%;
+    }
+
+    100% {
+        top: -100%;
+    }
+}
